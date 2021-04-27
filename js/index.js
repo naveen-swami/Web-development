@@ -1,4 +1,4 @@
-let arr = [1, 2, 3, 4, 5]
+const arr = [1, 2, 3, 4, 5]
 
 console.log(numberOfRoof(arr))
 
@@ -14,9 +14,7 @@ function numberOfRoof(arr) {
     return count;
 }
 
-// arrow function
-const numberOfPrimes = (n) => {
-
+function numberOfPrimes(n) {
     let num = 1;
     let count = 0;
     if (n >= 2) {
@@ -27,16 +25,16 @@ const numberOfPrimes = (n) => {
     }
 
     while (num * 6 + 1 <= n) {
-            if(isItPrime(num*6-1)){
-                count++;
-            } 
-            if(isItPrime(num*6+1)){
-                count++;
-            }
+        if (isItPrime(num * 6 - 1)) {
+            count++;
+        }
+        if (isItPrime(num * 6 + 1)) {
+            count++;
+        }
         num++;
     }
 
-    if (num * 6 - 1 === n) {
+    if (num * 6 - 1 === n && isItPrime(num*6 - 1)) {
         count++;
     }
 
@@ -57,5 +55,43 @@ function isItPrime(num) {
     return true;
 }
 
-console.log(isItPrime(2))
-console.log(numberOfPrimes(5003))
+// arrow function
+const numberOfPrimes1 = (n) => {
+
+    // let num = 1;
+    let count = 0;
+
+    for(let i = 2; i <= n; i++) {
+         if(isItPrime1(i)) {
+             count++;
+         }
+
+    }
+    return count;
+}
+
+function isItPrime1(num) {
+
+    if (num <= 1) {
+        return false;
+    }
+    if(num <= 3) {
+        return true;
+    } 
+
+    if(num % 2 ===0 || num % 3 === 0) {
+        return false;
+    }
+
+    for (let i = 5; i * i <= num; i = i +6) {
+        if (num % i === 0 || num % (i+2) == 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+console.log(isItPrime1(11))
+console.log(numberOfPrimes1(5000))
+
+console.warn(numberOfPrimes(5000))

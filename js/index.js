@@ -13,3 +13,49 @@ function numberOfRoof(arr) {
     })
     return count;
 }
+
+// arrow function
+const numberOfPrimes = (n) => {
+
+    let num = 1;
+    let count = 0;
+    if (n >= 2) {
+        count++;
+    }
+    if (n >= 3) {
+        count++;
+    }
+
+    while (num * 6 + 1 <= n) {
+            if(isItPrime(num*6-1)){
+                count++;
+            } 
+            if(isItPrime(num*6+1)){
+                count++;
+            }
+        num++;
+    }
+
+    if (num * 6 - 1 === n) {
+        count++;
+    }
+
+    return count;
+}
+
+function isItPrime(num) {
+
+    if (num <= 1) {
+        return false;
+    }
+
+    for (let i = 2; i * i <= num; i++) {
+        if (num % i === 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+console.log(isItPrime(2))
+console.log(numberOfPrimes(5003))

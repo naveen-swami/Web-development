@@ -67,6 +67,97 @@ Link each picture with the provided information page -->
         </ul>
     </div>
 
+    <div data-ns-test="block-inline-button">
+        <button>Test1</button>
+        <button>Test2</button>
+        Answer: Inline
+    </div>
+
+    <div data-ns-test="block-inline-div">
+        <div>
+            hello
+        </div>
+        <div>
+            hello 2
+        </div>
+        Answer: Block
+    </div>
+
+    <div data-ns-test="block-inline-span">
+        <span>hello span</span>
+        <span>hello span 2</span>
+        Answer: Inline
+    </div>
+
+    <div data-ns-test="block-inline-p"">
+        <p>hello p</p>
+        <p>hello p 2</p>
+		Answer: Block
+	</div>
+
+	<div data-ns-test=" block-inline-input">
+        <input>hello input</input>
+        <input>hello input 2</input>
+        Answer: Inline
+    </div>
+
+    <div data-ns-test="block-inline-cite">
+        <cite> hello cite </cite>
+        <cite>hello cite 2</cite>
+        Answer: Inline
+    </div>
+
+    <div data-ns-test="block-inline-code">
+        <code> hello code </code>
+        <code> hello code 2</code>
+        Answer: Inline
+    </div>
+
+    <div data-ns-test="block-inline-p"">
+        <p>hello p</p>
+        <p>hello p 2</p>
+		Answer: Block
+	</div>
+
+	<div data-ns-test=" block-inline-h1">
+        <h1>hello h1<h1>
+                <h1>hello h2</h1>
+                Answer: Block
+    </div>
+
+    <div data-ns-test="block-inline-sup">
+        <sup> hello superscript </sup>
+        <sup> hello superscript 2 </sup>
+        Answer: Inline
+    </div>
+
+    <div data-ns-test="block-inline-sup">
+        <sub> hello subscript</sub>
+        <sub> hello subscript 2</sub>
+        Answer: Inline
+    </div>
+    <div onmousedown="mDown(this)" onmouseup="mUp(this)" onclick="onCl(this)"
+        style="background-color:#D94A38;width:90px;height:20px;padding:40px;">
+        Click Me</div>
+
+    <script>
+        function onCl(obj) {
+            obj.style.backgroundColor = "green";
+            obj.innerHTML = "on click";
+        }
+
+        function mDown(obj) {
+            obj.style.backgroundColor = "#1ec5e5";
+            obj.innerHTML = "Release Me";
+        }
+
+        function mUp(obj) {
+            setInterval(5000);
+            obj.style.backgroundColor = "#D94A38";
+            obj.innerHTML = "Thank You";
+        }
+    </script>
+
 </body>
 
 </html>

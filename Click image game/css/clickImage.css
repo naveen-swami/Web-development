@@ -1,0 +1,15 @@
+#main-container{
+  
+    display: grid;
+    grid-template-columns: repeat(3,100px);
+    grid-template-rows: repeat(3,100px);
+    grid-gap: 1em;
+}
+.cells{
+
+    background-color: red;
+    
+}
+.mole{
+    background-image: url(https://i.picsum.photos/id/528/100/100.jpg?hmac=SAYimp0JnCk_J0qCyTawYXDerrrF9iT2XVN3DZSB35U);
+}

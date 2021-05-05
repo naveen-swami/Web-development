@@ -14,3 +14,11 @@
 .button_night {
     background-color: black;
 }
+
+#useless-paragraph {
+    visibility: hidden
+ }
+
+ .counterContainer {
+    display: flex
+}

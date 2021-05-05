@@ -1,21 +1,96 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <title>
-        <link rel="stylesheet" href="../css/dom.css">
-        <script src="../js/dom.js"> </script>
         <h1>Dom vs bom</h1>
     </title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/dom.css">
+    <script src="../js/dom.js"> </script>
 </head>
 
 <body>
 
-     <div id="appId" class="day_container"> 
-          <p>hi Naveen ... congrets dear you are selected in google interview. you can join google from 1st June 2021</p>
-          <button id="swapId" class="button_day" onclick="swapTheme()"> Change theme </button>
-     </div>
-   
+    <div id="appId" class="day_container">
+        <p>hi Naveen ... congrets dear you are selected in google interview. you can join google from 1st June 2021</p>
+        <button id="swapId" class="button_day" onclick="swapTheme()"> Change theme </button>
+    </div>
+
+    <!-- this is change visibility of text -->
+    <div>
+        <h1>I am a headline made with HTML</h1>
+        <br />
+        <p id="useless-paragraph">Useless paragraph.</p>
+        <br />
+        <button onclick="toggleVisibility()">Toggle Button</button>
+    </div>
+
+    <div>
+        <div class="counterContainer">
+            <h3>Count = </h3>
+            <h3 id="counter">0</h3>
+        </div>
+        <button id="increment" onclick="incrementClickHandler()">like</button>
+        <button id="decrement" onclick="decrementClickHandler()">dislike</button>
+    </div>
+
+
+    <!-- querySelectorAll("")  // get doucment object from css selector(clss, id, tag, attribute , value) -->
+    <div>
+        <table id="tableContainer">
+            <tr>
+                <th>qty</th>
+                <th>Items List</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Item-1</td>
+                <td data-ns-test="price">18361</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Item-2</td>
+                <td data-ns-test="price">18361</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Item-3</td>
+                <td data-ns-test="price">17373</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Item-4</td>
+                <td data-ns-test="price">17361</td>
+            </tr>
+        </table>
+    </div>
+
+
+    <!-- Create shopping list dynamically -->
+
+    <div>
+        <h1>Grocery List</h1>
+        <label for="item-name-input"></label>
+        <input type="text" name="itemTitle" id="item-name-input" placeholder="title">
+        <label for="item-price-input"></label>
+        <input type="number" name="ittemPrice" id="item-price-input" placeholder="price">
+        <label for="addBtn"></label>
+        <input type="button" onclick="totalGroceryListPriceClickHandler(this)" value="Add" name="addButton" id="addBtn">
+    </div>
+
+    <table id="groceryListTable">
+        <tr>
+            <th>Sr. No.</th>
+            <th>Title</th>
+            <th>Price</th>
+        </tr>
+    </table>
+    <h1 data-ns-test="grandTotal">0</h1>
+
 </body>
 
 </html>

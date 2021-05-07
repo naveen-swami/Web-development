@@ -91,33 +91,30 @@ function grandTotal() {
 function totalGroceryListPriceClickHandler(event) {
     const title = document.getElementById("item-name-input");
     const price = document.getElementById("item-price-input");
-
-    let table = document.getElementById("groceryListTable");
-    let priceList = document.getElementsByClassName("itemPrice");
-
-    if (priceList.length != 0) {
-
-        priceList.forEach(it => {
-            sum += parseInt(it.innerText);
-        });
+    if(title.value === "" || price.value === ""){
+        price.value = "";
+        title.value= "";
+        return;
     }
-
-    let qty = table.rows.lenght;
-
-    // create table row
-    let row = table.insertRow();
-    let cell1 = row.insertCell(0);
-    cell1.innerText = qty + 1;
-    let cell2 = row.insertCell(1);
-    cell2.setattribute("data-ns-test", "item-name");
-    cell2.innerText = title;
-    let cell3 = row.insertCell(2);
-    cell3.setattribute("data-ns-test", "item-price")
-    cell3.setattribute("class", "itemPrice");
-    cell3.innerText = sum + parseInt(price);
-
-
-
-
+ 
+     let table = document.getElementById("groceryListTable");
+ 
+     let qty = table.rows.length;
+ 
+     // create table row
+     let row = table.insertRow();
+     let cell1 = row.insertCell(0);
+     cell1.innerText = qty;
+     let cell2 = row.insertCell(1);
+     cell2.setAttribute("data-ns-test", "item-name");
+     cell2.innerText = title.value;
+     let cell3 = row.insertCell(2);
+     cell3.setAttribute("data-ns-test", "item-price")
+     cell3.setAttribute("class", "itemPrice");
+     cell3.innerText = parseInt(price.value);
+     const totalAmount = document.getElementById("totalAmount");
+     totalAmount.innerText = Number(totalAmount.innerText) + Number(price.value);
+     price.value = "";
+     title.value = "";
 
 }

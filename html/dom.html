@@ -77,7 +77,7 @@
         <label for="item-name-input"></label>
         <input type="text" name="itemTitle" id="item-name-input" placeholder="title">
         <label for="item-price-input"></label>
-        <input type="number" name="ittemPrice" id="item-price-input" placeholder="price">
+        <input type="number" name="price" id="item-price-input" placeholder="price">
         <label for="addBtn"></label>
         <input type="button" onclick="totalGroceryListPriceClickHandler(this)" value="Add" name="addButton" id="addBtn">
     </div>
@@ -89,7 +89,7 @@
             <th>Price</th>
         </tr>
     </table>
-    <h1 data-ns-test="grandTotal">0</h1>
+    <h1 id="totalAmount" data-ns-test="grandTotal">0</h1>
 
 </body>
 

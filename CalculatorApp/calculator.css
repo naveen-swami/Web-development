@@ -95,6 +95,12 @@ body {
     border-radius: 16px;
     font-weight: 800;
     cursor: pointer;
+    box-shadow: 4px 6px 13px -3px rgba(0,0,0,0.53);
+   -webkit-box-shadow: 4px 6px 13px -3px rgba(0,0,0,0.53);
+   -moz-box-shadow: 4px 6px 13px -3px rgba(0,0,0,0.53);
+}
+.key:hover{
+    background-color:lightskyblue;
 }
 
 #keypad-table-container {

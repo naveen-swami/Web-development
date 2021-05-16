@@ -6,6 +6,7 @@
 
 
 // here arrow function does not work
+// here __proto__ does not work
 Array.prototype.includesOneof = function(arr) {
 
     console.log(this);
@@ -18,7 +19,7 @@ Array.prototype.includesOneof = function(arr) {
         // we have to always insert into double colon 
            if(typeof arr[0] !== "object"){
               return arr.some(item => this.includes(item));
-           } else { // for object and array
+           } else { // for object and array we need to check there inside value
              for(let obj1 of arr)  {
                  if(this.some(obj2 => shallowCheck(obj1, obj2))){
                      return true;

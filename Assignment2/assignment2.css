@@ -1,3 +1,31 @@
 .scrolling-container{
     background: lightblue;
 }
+
+.scrolling-container{
+    background: lightblue;
+}
+
+.drag-drop-replace-container{
+    margin-top:  16px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.drop-container{
+    height: 90px;
+    width: 90px;
+    border: 1px solid lightblue;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.drag-image{
+    height: 90px;
+    width: 90px;
+    border-radius: 16px;
+}
+
+.stop-watch-container {
+    margin-top: 16px;
+}
